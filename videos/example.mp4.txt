@@ -1,0 +1,1 @@
+Put your first MP4 in this folder and name it example.mp4, or remove the example entry from videos.json.

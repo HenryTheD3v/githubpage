@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Henry's Video Library</title>
+  <meta name="description" content="A personal video library hosted on GitHub Pages.">
+  <meta property="og:title" content="Henry's Video Library">
+  <meta property="og:description" content="Watch videos from Henry's personal video library.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <a class="brand" href="./">
+        <span class="brand-icon">▶</span>
+        <span>Henry's Videos</span>
+      </a>
+      <label class="search">
+        <span>⌕</span>
+        <input id="search" type="search" placeholder="Search videos..." autocomplete="off">
+      </label>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="side-title">Library</div>
+        <div id="videoList" class="video-list"></div>
+        <div id="count" class="count"></div>
+      </aside>
+
+      <section class="content">
+        <div id="empty" class="empty">
+          <div class="empty-icon">▶</div>
+          <h1>Your video library</h1>
+          <p>Add MP4 files to <code>videos/</code> and list them in <code>videos.json</code>.</p>
+        </div>
+
+        <div id="playerView" class="player-view hidden">
+          <div class="video-wrap">
+            <video id="player" controls preload="metadata"></video>
+          </div>
+          <div class="video-info">
+            <div>
+              <h1 id="title"></h1>
+              <p id="description"></p>
+            </div>
+            <button id="copyLink" class="share">🔗 Copy link</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
